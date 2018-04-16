@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+ 
+<tiles-definitions>  
+  
+   <!-- Base Definition -->
+   <definition name="base-definition"
+       template="/WEB-INF/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/tiles/defaultHeader.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/tiles/defaultMenu.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/tiles/defaultFooter.jsp" />  
+   </definition>  
+   <!-- Login Page -->
+   <definition name="login" extends="base-definition">  
+       <put-attribute name="title" value="Login" />  
+       <put-attribute name="body" value="/WEB-INF/views/login.jsp" />  
+   </definition>  
+      <!-- Users List Page -->
+   <definition name="userslist" extends="base-definition">  
+       <put-attribute name="title" value="Users|List" />  
+       <put-attribute name="body" value="/WEB-INF/views/userslist.jsp" />  
+   </definition>  
+  <!-- Registration Page -->
+   <definition name="registration" extends="base-definition">  
+       <put-attribute name="title" value="Registration" />  
+       <put-attribute name="body" value="/WEB-INF/views/registration.jsp" />  
+   </definition>  
+  <!-- Registration Success Page -->
+   <definition name="registrationsuccess" extends="base-definition">  
+       <put-attribute name="title" value="Registration|Success" />  
+       <put-attribute name="body" value="/WEB-INF/views/registrationsuccess.jsp" />  
+   </definition>  
+   <!-- Access Denied -->
+   <definition name="accessDenied" extends="base-definition">  
+       <put-attribute name="title" value="Access|Denied" />  
+       <put-attribute name="body" value="/WEB-INF/views/accessDenied.jsp" />  
+   </definition>  
+    <!-- Global Exception -->
+   <definition name="globalException" extends="base-definition">  
+       <put-attribute name="title" value="Global|Exception" />  
+       <put-attribute name="body" value="/WEB-INF/views/globalException.jsp" />  
+   </definition>  
+</tiles-definitions>
