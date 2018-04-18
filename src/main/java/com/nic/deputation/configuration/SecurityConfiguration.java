@@ -65,7 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.addFilterBefore( new CustomFilter(), UsernamePasswordAuthenticationFilter.class);
+		http = http.addFilter(new CustomFilter());
 		http.authorizeRequests().antMatchers("/captchacheck").permitAll()
 				.antMatchers("/", "/list")
 				.access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
